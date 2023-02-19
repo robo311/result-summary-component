@@ -1,0 +1,241 @@
+/* ### Primary
+
+- Light red: hsl(0, 100%, 67%)
+- Orangey yellow: hsl(39, 100%, 56%)
+- Green teal: hsl(166, 100%, 37%)
+- Cobalt blue: hsl(234, 85%, 45%)
+## Gradients
+
+- Light slate blue (background): hsl(252, 100%, 67%) - 120, 87, 255
+- Light royal blue (background): hsl(241, 81%, 54%) - 47, 44, 232
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1) - rgba(77, 32, 201, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0) - rgba(35, 32, 201, 0)
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Pale blue: hsl(221, 100%, 96%)
+- Light lavender: hsl(241, 100%, 89%)
+- Dark gray blue: hsl(224, 30%, 27%) 
+- Font size (paragraphs): 18px
+*/
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: azure;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+p{
+    font-size: 18px;
+}
+
+button{
+    padding: 15px 120px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+    background-color: hsl(224, 30%, 27%) ;
+    color: white;
+    cursor: pointer;
+    
+}
+
+button:hover{
+    background: linear-gradient(0deg, rgba(47,44,232,1) 0%, rgba(120,87,255,1) 100%);
+    transition: all;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+}
+
+span{
+   color:  hsl(241, 100%, 89%); 
+}
+
+strong{
+    color: hsl(224, 30%, 27%);
+}
+
+.button-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-title{
+    color: hsl(221, 100%, 96%);
+}
+
+.result-main{
+    background: linear-gradient(0deg, rgba(47,44,232,1) 0%, rgba(120,87,255,1) 100%);
+    padding: 60px;
+    display: flex;
+    flex-flow: column;
+    gap: 2em;
+    text-align: center;
+    align-items: center;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.result-circle{
+    background: linear-gradient(0deg, rgba(77,32,201,0) 0%, rgba(35,32,201,1) 100%);
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+}
+
+
+.result-circle h1{
+    font-size: 50px;
+}
+
+.result-circle small{
+    color: hsl(221, 100%, 96%);
+    font-size: 16px;
+}
+
+.result-text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.result-text p{
+    color: hsl(221, 100%, 96%);
+}
+
+.result-text h2{
+    color: white;
+}
+
+.summary_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.summary{
+    padding: 30px;
+}
+
+.summary div{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.summary_wrapper h1{
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left: 35px;
+}
+
+.reaction{ 
+    color: hsl(0, 100%, 67%);
+}
+
+.reaction-wrapper{
+    background-color: hsla(0, 100%, 67%, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.reaction-wrapper div{
+    margin-top: 8px;
+}
+
+.memory{
+    color: hsl(39, 100%, 56%);
+}
+
+.memory-wrapper{
+    background-color: hsla(39, 100%, 56%, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+
+}
+.memory-wrapper div{
+    margin-top: 8px;
+}
+
+.verbal{
+    color:hsl(166, 100%, 37%);
+}
+
+.verbal-wrapper{
+    background-color: hsla(166, 100%, 37%, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.verbal-wrapper div{
+    margin-top: 8px;
+}
+.visual{
+    color: hsl(234, 85%, 45%);
+}
+
+.visual-wrapper{
+    background-color: hsla(234, 85%, 45%, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+
+}
+.visual-wrapper div{
+    margin-top: 8px;
+}
+
+@media only screen and (min-width: 650px) {
+    main {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 100px;
+      filter: drop-shadow(5px 5px 5px #dadada);
+    }
+    .main{
+        flex-direction: row;
+        gap: 20px;
+        border-radius: 30px;
+    }
+    .result-main{
+        border-radius: 30px 30px 30px 30px;
+        max-width: 380px;
+    }
+    button{
+        padding: 15px 100px;
+        margin-bottom: 20px; margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+
